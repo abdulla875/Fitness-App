@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+  <ImageView
+      android:id="@+id/title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/title"/>
+
+  <Button
+      android:layout_width="267dp"
+      android:layout_height="89dp"
+      android:layout_below="@id/title"
+      android:layout_alignParentEnd="true"
+      android:layout_marginTop="71dp"
+      android:layout_marginEnd="78dp"
+      android:background="@color/black"
+      android:text="Workout"
+      android:id="@+id/workoutbtn"
+      android:textSize="35sp" />
+
+  <Button
+      android:id="@+id/caloriesbtn"
+      android:layout_width="267dp"
+      android:layout_height="89dp"
+      android:layout_below="@id/workoutbtn"
+      android:layout_alignParentEnd="true"
+      android:layout_marginTop="26dp"
+      android:layout_marginEnd="74dp"
+      android:background="@color/black"
+      android:text="Calories"
+      android:textSize="35sp" />
+  <Button
+      android:id="@+id/statusbtn"
+      android:layout_width="267dp"
+      android:layout_height="89dp"
+      android:layout_below="@id/caloriesbtn"
+      android:layout_alignParentEnd="true"
+      android:layout_marginTop="26dp"
+      android:layout_marginEnd="74dp"
+      android:background="@color/black"
+      android:text="My Status"
+      android:textSize="35sp" />
+
+
+</RelativeLayout>
