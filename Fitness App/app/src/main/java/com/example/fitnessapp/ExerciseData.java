@@ -6,4 +6,5 @@ public class ExerciseData {
     int id;
     String exercise;
     Bitmap image;
+
 }
