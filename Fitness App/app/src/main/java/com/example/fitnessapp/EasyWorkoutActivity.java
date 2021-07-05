@@ -2,6 +2,7 @@ package com.example.fitnessapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Chronometer;
@@ -36,7 +37,7 @@ public class EasyWorkoutActivity extends AppCompatActivity {
         exerciseId.setText(easyExerciseData.exerciseNon + " / " + easyExerciseData.workoutList.size());
         showExercise(easyExerciseData.index);
     }
-    private void showExercise(int index){
+    public void showExercise(int index){
         workoutNameTxt.setText(easyExerciseData.workoutList.get(index));
 
         repsTxt.setText(easyExerciseData.repsList.get(index));
@@ -47,6 +48,7 @@ public class EasyWorkoutActivity extends AppCompatActivity {
         easyExerciseData.index ++;
         easyExerciseData.exerciseNon++;
        startWorkout();
+        startActivity(new Intent(EasyWorkoutActivity.this,RestActivity.class));
     }
 
     public void backExercise(View view) {
