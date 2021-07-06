@@ -25,4 +25,5 @@ public class EasyExerciseData implements Exercises {
         map.put(workoutList.get(1), R.drawable.pikepushup);
         map.put(workoutList.get(2), R.drawable.starpushup);
     }
+
 }
