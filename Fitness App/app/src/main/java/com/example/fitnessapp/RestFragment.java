@@ -1,15 +1,23 @@
 package com.example.fitnessapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.fragment.app.Fragment;
 
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.time.Instant;
+import java.util.Locale;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,7 +34,9 @@ public class RestFragment extends Fragment {
     private static final String WORKOUTGIF = "gifs";
     private static final String EXERCISENUMBER = "exercisenumber";
 
-
+    private  long START_TIME_IN_MILLIS = 31000;
+    private CountDownTimer mCountDownTimer;
+    private long timeLeftInMillis = START_TIME_IN_MILLIS;
     private OnFragmentInteractionListener mListener;
 
     // TODO: Rename and change types of parameters
@@ -35,12 +45,14 @@ public class RestFragment extends Fragment {
     private int updatedGif;
     private String updateNextWorkoutNumber;
 
+
     private TextView workoutNameTextView;
     private TextView nextRepsTextView;
     private ImageView buttonFragmentImageView;
     private ImageView showNextWorkoutGifsImageView;
     private TextView nextWorkoutNumberTextView;
     private TextView countdownTimerTextView;
+    private ImageView addSecondImageView;
 
 
     public RestFragment() {
@@ -78,6 +90,7 @@ public class RestFragment extends Fragment {
             updatedGif =  getArguments().getInt(WORKOUTGIF);
             updateNextWorkoutNumber = getArguments().getString(EXERCISENUMBER);
         }
+
     }
 
     @Override
@@ -89,11 +102,14 @@ public class RestFragment extends Fragment {
         buttonFragmentImageView = view.findViewById(R.id.skipBtn);
         showNextWorkoutGifsImageView = view.findViewById(R.id.restGifs);
         nextWorkoutNumberTextView = view.findViewById(R.id.nextWorkoutNumber);
+        countdownTimerTextView = view.findViewById(R.id.countDownTimer);
+        addSecondImageView = view.findViewById(R.id.addSeconds);
 
         workoutNameTextView.setText(updatedWorkoutName);
         nextRepsTextView.setText(updatedRepsList);
         showNextWorkoutGifsImageView.setImageResource(updatedGif);
         nextWorkoutNumberTextView.setText(updateNextWorkoutNumber);
+
 
         nextRepsTextView.requestFocus();
         workoutNameTextView.requestFocus();
@@ -108,8 +124,49 @@ public class RestFragment extends Fragment {
                 sendBack(newWorkoutName);
             }
         });
+
+
+        addSecondImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                timeLeftInMillis = START_TIME_IN_MILLIS + 21000;
+                updateCountDownText();
+            }
+        });
+
+
+        startTimer();
+        updateCountDownText();
         return view;
     }
+
+    private void startTimer(){
+        mCountDownTimer = new CountDownTimer(timeLeftInMillis,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timeLeftInMillis = millisUntilFinished;
+                updateCountDownText();
+            }
+
+            @Override
+            public void onFinish() {
+                String newWorkoutName = workoutNameTextView.getText().toString();
+                sendBack(newWorkoutName);
+            }
+        }.start();
+    }
+
+    private void updateCountDownText(){
+        int minutes = (int) (timeLeftInMillis / 1000) / 60;
+        int seconds = (int) (timeLeftInMillis / 1000) % 60;
+        String timeLeftFormatted = String.format(Locale.getDefault(),"%02d:%02d", minutes,seconds);
+        countdownTimerTextView.setText(timeLeftFormatted);
+    }
+
+
+
+
     public void sendBack(String workoutName) {
         if (mListener != null) {
             mListener.onFragmentInteraction(workoutName);

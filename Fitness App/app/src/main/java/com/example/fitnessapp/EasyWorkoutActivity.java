@@ -17,6 +17,7 @@ public class EasyWorkoutActivity extends AppCompatActivity implements RestFragme
     private TextView repsTxt;
     private TextView exerciseId;
     private FrameLayout fragmentContainer;
+    private ImageView goLeftBtn;
     private ImageView showWorkout;
     private EasyExerciseData easyExerciseData = new EasyExerciseData();
     private Chronometer timer;
@@ -30,6 +31,7 @@ public class EasyWorkoutActivity extends AppCompatActivity implements RestFragme
         repsTxt = findViewById(R.id.reps);
         exerciseId = findViewById(R.id.exerciseId);
         fragmentContainer = findViewById(R.id.frame_Container);
+        goLeftBtn = findViewById(R.id.goleft_btn);
         easyExerciseData.exerciseData();
         timer = findViewById(R.id.timer);
         timer.start();
@@ -37,6 +39,11 @@ public class EasyWorkoutActivity extends AppCompatActivity implements RestFragme
     }
 
     public void startWorkout(){
+        if(easyExerciseData.exerciseNon == 1){
+            goLeftBtn.setVisibility(View.GONE);
+        }else if(easyExerciseData.exerciseNon > 1){
+            goLeftBtn.setVisibility(View.VISIBLE);
+        }
         exerciseId.setText(easyExerciseData.exerciseNon + " / " + easyExerciseData.workoutList.size());
         showExercise(easyExerciseData.index);
     }
@@ -49,7 +56,6 @@ public class EasyWorkoutActivity extends AppCompatActivity implements RestFragme
     public void nextExercise(View view) {
         easyExerciseData.index ++;
         easyExerciseData.exerciseNon++;
-
         // This will get WorkoutData and it will be used to pass it to the Fragment //
         openFragment(easyExerciseData.workoutList.get(easyExerciseData.index), easyExerciseData.repsList.get(easyExerciseData.index),easyExerciseData.map.get(easyExerciseData.workoutList.get(easyExerciseData.index)),
                 easyExerciseData.exerciseNon + " / " + easyExerciseData.workoutList.size());
