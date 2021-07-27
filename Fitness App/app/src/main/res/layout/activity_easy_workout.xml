@@ -11,9 +11,13 @@
         android:id="@+id/exerciseNameId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/exerciseId"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="38dp"
+        android:gravity="center"
         android:text="Diamond Push-up"
         android:textColor="#000000"
         android:textSize="44sp" />
@@ -24,21 +28,20 @@
         android:layout_height="262dp"
         android:layout_below="@id/exerciseNameId"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="57dp"
-        android:layout_marginEnd="39dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="44dp"
         android:src="@drawable/starpushup"></pl.droidsonroids.gif.GifImageView>
 
-
     <TextView
+        android:id="@+id/reps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/gifs"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="183dp"
         android:text="X 12"
         android:textColor="#00008b"
-        android:id="@+id/reps"
         android:textSize="30dp" />
 
     <TextView
@@ -50,19 +53,6 @@
         android:textColor="#000000"
         android:textSize="30dp"
         android:layout_marginLeft="20dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="196dp"
-        android:text="1/10"
-        android:textColor="#000000"
-        android:id="@+id/exerciseId"
-        android:textSize="30dp" />
 
 
     <!--    <TextView-->
@@ -77,6 +67,19 @@
 <!--        android:text="00:00"-->
 <!--        android:textColor="#000000"-->
 <!--        android:textSize="30dp" />-->
+
+    <TextView
+        android:id="@+id/exerciseId"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="146dp"
+        android:text="1/10"
+        android:textColor="#000000"
+        android:textSize="30dp" />
 
     <ImageView
         android:layout_width="92dp"
@@ -113,18 +116,20 @@
         android:src="@drawable/left"/>
 
     <Chronometer
+        android:id="@+id/timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="14dp"
-        android:layout_marginEnd="50dp"
-        android:textSize="30sp"
-        android:id="@+id/timer"/>
+        android:layout_marginEnd="30dp"
+        android:textSize="30sp" />
 
     <FrameLayout
+        android:id="@+id/frame_Container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/frame_Container"/>
+        android:layout_height="match_parent" />
+
+
 
 </RelativeLayout>

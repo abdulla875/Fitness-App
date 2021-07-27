@@ -35,7 +35,13 @@ public class RestFragment extends Fragment {
     private static final String EXERCISENUMBER = "exercisenumber";
 
     private  long START_TIME_IN_MILLIS = 31000;
+
+    private String updatedTime;
+    private long temp;
+
     private CountDownTimer mCountDownTimer;
+    private CountDownTimer updatedCountDownTimer;
+
     private long timeLeftInMillis = START_TIME_IN_MILLIS;
     private OnFragmentInteractionListener mListener;
 
@@ -124,20 +130,17 @@ public class RestFragment extends Fragment {
                 sendBack(newWorkoutName);
             }
         });
-
-
-        addSecondImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                timeLeftInMillis = START_TIME_IN_MILLIS + 21000;
-                updateCountDownText();
-            }
-        });
-
-
         startTimer();
         updateCountDownText();
+
+//        addSecondImageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                addSecondUpdateCountDownText();
+//                mCountDownTimer.cancel();
+//                updateNewTime();
+//            }
+//        });
         return view;
     }
 
@@ -164,8 +167,32 @@ public class RestFragment extends Fragment {
         countdownTimerTextView.setText(timeLeftFormatted);
     }
 
-
-
+//
+//    private void addSecondUpdateCountDownText(){
+////        updatedTime = String.valueOf(countdownTimerTextView);
+//        temp = Long.parseLong(countdownTimerTextView.getText().toString());
+//        temp =+ 2000;
+//        updatedCountDownTimer = new CountDownTimer(temp, 1000) {
+//            @Override
+//            public void onTick(long millisUntilFinished) {
+//                temp = millisUntilFinished;
+//                updateNewTime();
+//            }
+//
+//            @Override
+//            public void onFinish() {
+//
+//            }
+//        }.start();
+//
+//    }
+//
+//    private void updateNewTime(){
+//        int minutes = (int) (temp / 1000) / 60;
+//        int seconds = (int) (temp / 1000) % 60;
+//        String timeLeftFormatted = String.format(Locale.getDefault(),"%02d:%02d", minutes,seconds);
+//        countdownTimerTextView.setText(timeLeftFormatted);
+//    }
 
     public void sendBack(String workoutName) {
         if (mListener != null) {

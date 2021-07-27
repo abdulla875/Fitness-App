@@ -57,7 +57,8 @@ public class EasyWorkoutActivity extends AppCompatActivity implements RestFragme
         easyExerciseData.index ++;
         easyExerciseData.exerciseNon++;
         // This will get WorkoutData and it will be used to pass it to the Fragment //
-        openFragment(easyExerciseData.workoutList.get(easyExerciseData.index), easyExerciseData.repsList.get(easyExerciseData.index),easyExerciseData.map.get(easyExerciseData.workoutList.get(easyExerciseData.index)),
+        openFragment(easyExerciseData.workoutList.get(easyExerciseData.index), easyExerciseData.repsList.get(easyExerciseData.index),
+                easyExerciseData.map.get(easyExerciseData.workoutList.get(easyExerciseData.index)),
                 easyExerciseData.exerciseNon + " / " + easyExerciseData.workoutList.size());
         startWorkout();
     }

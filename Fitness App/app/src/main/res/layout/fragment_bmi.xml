@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BmiFragment">
+
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/bmititle"
+    android:src="@drawable/bmi"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bmititle"
+        android:layout_marginTop="151dp"
+        android:layout_marginLeft="20dp"
+        android:text="Weight (KG)"
+        android:textSize="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bmititle"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="150dp"
+        android:id="@+id/weightEditText"
+        android:hint="Weight (KG)" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bmititle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="246dp"
+        android:text="Height (M)"
+        android:textSize="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bmititle"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="246dp"
+        android:id="@+id/heightEditText"
+        android:hint="Height (M)" />
+
+    <Button
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heightEditText"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="34dp"
+        android:id="@+id/bmiCheckbtn"
+        android:text="Check"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/bmiResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bmiCheckbtn"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="36dp"
+        android:text="BMI: "
+        android:textColor="@color/black"
+        android:textSize="30dp" />
+
+
+</RelativeLayout>
