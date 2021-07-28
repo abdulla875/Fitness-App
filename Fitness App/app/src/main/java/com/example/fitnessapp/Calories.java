@@ -1,20 +1,17 @@
 package com.example.fitnessapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class Calories extends AppCompatActivity implements View.OnClickListener {
 
     Button bmiButton;
     Button caloriesIntakebtn;
-    ImageView bmiTitleImageView;
+    ImageView CaloriesTitleImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +21,7 @@ public class Calories extends AppCompatActivity implements View.OnClickListener 
         caloriesIntakebtn = findViewById(R.id.caloriesIntakebtn);
         bmiButton.setOnClickListener(this);
         caloriesIntakebtn.setOnClickListener(this);
-
-        bmiTitleImageView = findViewById(R.id.caloriestitle);
+        CaloriesTitleImageView = findViewById(R.id.caloriestitle);
     }
 
     @Override
@@ -34,8 +30,19 @@ public class Calories extends AppCompatActivity implements View.OnClickListener 
             getSupportFragmentManager().beginTransaction().replace(R.id.bmifragment, new BmiFragment()).commit();
             bmiButton.setVisibility(View.GONE);
             caloriesIntakebtn.setVisibility(View.GONE);
-            bmiTitleImageView.setVisibility(View.GONE);
+            CaloriesTitleImageView.setVisibility(View.GONE);
 
         }
+
+        if(v.getId()==R.id.caloriesIntakebtn){
+            getSupportFragmentManager().beginTransaction().replace(R.id.caloriesIntakeFragment, new CaloriesIntakeFragment()).commit();
+            bmiButton.setVisibility(View.GONE);
+            caloriesIntakebtn.setVisibility(View.GONE);
+            CaloriesTitleImageView.setVisibility(View.GONE);
+
+        }
+
     }
+
+
 }

@@ -41,4 +41,10 @@
         android:layout_height="match_parent"
         android:layout_marginTop="0dp" />
 
+    <FrameLayout
+        android:id="@+id/caloriesIntakeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp" />
+
 </RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CaloriesIntakeFragment">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/caloriesintake"
+        android:id="@+id/caloriesintake"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="20dp"
+        android:text="Weight (KG)"
+        android:textSize="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="130dp"
+        android:id="@+id/weightEditText"
+        android:hint="Weight (KG)" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="226dp"
+        android:text="Height (M)"
+        android:textSize="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="226dp"
+        android:id="@+id/heightEditText"
+        android:hint="Height (M)" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="322dp"
+        android:text="Age"
+        android:textSize="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="322dp"
+        android:id="@+id/ageEditText"
+        android:hint="Age" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="418dp"
+        android:text="Gender"
+        android:textSize="30dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="418dp"
+        android:id="@+id/genderSpinner"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="514dp"
+        android:text="Activity"
+        android:textSize="30dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="514dp"
+        android:id="@+id/activityLevelSpinner"
+        />
+
+    <Button
+        android:id="@+id/caloriesIntakeCheckbtn"
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activityLevelSpinner"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="33dp"
+        android:text="Check"
+        android:onClick="checkCaloriesIntake"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/caloriesIntakeResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/caloriesIntakeCheckbtn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="13dp"
+        android:text="Your daily calorie intake should be:  "
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+</RelativeLayout>
