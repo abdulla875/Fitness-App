@@ -25,7 +25,7 @@
         android:textSize="35sp" />
 
     <Button
-        android:id="@+id/Mediumbtn"
+        android:id="@+id/mediumbtn"
         android:layout_width="267dp"
         android:layout_height="89dp"
         android:layout_below="@id/easybtn"
@@ -39,7 +39,7 @@
         android:id="@+id/hardbtn"
         android:layout_width="267dp"
         android:layout_height="89dp"
-        android:layout_below="@id/Mediumbtn"
+        android:layout_below="@id/mediumbtn"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="74dp"

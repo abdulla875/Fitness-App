@@ -1,10 +1,8 @@
 package com.example.fitnessapp;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.activity.OnBackPressedCallback;
 import androidx.fragment.app.Fragment;
 
 import android.os.CountDownTimer;
@@ -14,17 +12,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.time.Instant;
 import java.util.Locale;
-import java.util.Timer;
-import java.util.TimerTask;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link RestFragment#newInstance} factory method to
+ * Use the {@link MediumExerciseRestFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class RestFragment extends Fragment {
+public class MediumExerciseRestFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,7 +56,7 @@ public class RestFragment extends Fragment {
     private ImageView addSecondImageView;
 
 
-    public RestFragment() {
+    public MediumExerciseRestFragment() {
         // Required empty public constructor
     }
 
@@ -69,23 +64,21 @@ public class RestFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @return A new instance of fragment BlankFragment.
+     *
+     * @return A new instance of fragment MediumExerciseRestFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static RestFragment newInstance(String workoutName, String repsList, int gifIndex, String nextWorkoutNumber) {
-        RestFragment fragment = new RestFragment();
+    public static MediumExerciseRestFragment newInstance(String workoutName, String repsList, int gifIndex, String nextWorkoutNumber) {
+        MediumExerciseRestFragment fragment = new MediumExerciseRestFragment();
         Bundle args = new Bundle();
 
         args.putString(WORKOUTNAMETEXT, workoutName);
         args.putString(REPLISTTEXT,repsList);
         args.putInt(WORKOUTGIF,gifIndex);
         args.putString(EXERCISENUMBER,nextWorkoutNumber);
-
         fragment.setArguments(args);
         return fragment;
     }
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -96,13 +89,13 @@ public class RestFragment extends Fragment {
             updatedGif =  getArguments().getInt(WORKOUTGIF);
             updateNextWorkoutNumber = getArguments().getString(EXERCISENUMBER);
         }
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view =  inflater.inflate(R.layout.fragment_rest, container, false);
+
+        View view =  inflater.inflate(R.layout.fragment_medium_exercise_rest, container, false);
         workoutNameTextView = view.findViewById(R.id.fragmentWorkoutName);
         nextRepsTextView = view.findViewById(R.id.nextReps);
         buttonFragmentImageView = view.findViewById(R.id.skipBtn);
@@ -167,38 +160,12 @@ public class RestFragment extends Fragment {
         countdownTimerTextView.setText(timeLeftFormatted);
     }
 
-//
-//    private void addSecondUpdateCountDownText(){
-////        updatedTime = String.valueOf(countdownTimerTextView);
-//        temp = Long.parseLong(countdownTimerTextView.getText().toString());
-//        temp =+ 2000;
-//        updatedCountDownTimer = new CountDownTimer(temp, 1000) {
-//            @Override
-//            public void onTick(long millisUntilFinished) {
-//                temp = millisUntilFinished;
-//                updateNewTime();
-//            }
-//
-//            @Override
-//            public void onFinish() {
-//
-//            }
-//        }.start();
-//
-//    }
-//
-//    private void updateNewTime(){
-//        int minutes = (int) (temp / 1000) / 60;
-//        int seconds = (int) (temp / 1000) % 60;
-//        String timeLeftFormatted = String.format(Locale.getDefault(),"%02d:%02d", minutes,seconds);
-//        countdownTimerTextView.setText(timeLeftFormatted);
-//    }
-
     public void sendBack(String workoutName) {
         if (mListener != null) {
             mListener.onFragmentInteraction(workoutName);
         }
     }
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);

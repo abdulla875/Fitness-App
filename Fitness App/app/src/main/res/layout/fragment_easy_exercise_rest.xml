@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DarkBlue"
+    android:clickable="true"
+    tools:context=".EasyExerciseRestFragment">
+
+    <TextView
+        android:id="@+id/rest"
+        android:layout_width="100dp"
+        android:layout_height="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="148dp"
+        android:text="Rest"
+        android:textColor="@color/white"
+        android:textSize="35sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rest"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:text="00:00"
+        android:textColor="@color/white"
+        android:id="@+id/countDownTimer"
+        android:textSize="60sp" />
+
+    <ImageView
+        android:layout_width="155dp"
+        android:layout_height="74dp"
+        android:layout_below="@+id/countDownTimer"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="35dp"
+        android:id="@+id/skipBtn"
+        android:src="@drawable/skip" />
+    <ImageView
+        android:layout_width="155dp"
+        android:layout_height="74dp"
+        android:layout_below="@+id/countDownTimer"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="240dp"
+        android:id="@+id/addSeconds"
+        android:src="@drawable/addsecond" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/restGifs"
+        android:layout_width="match_parent"
+        android:layout_height="218dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-3dp"
+        android:background="@color/white"
+        android:src="@drawable/starpushup"></pl.droidsonroids.gif.GifImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addSeconds"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="31dp"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addSeconds"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="149dp"
+        android:id="@+id/fragmentWorkoutName"
+        android:text="Diamond Push-up"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addSeconds"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="255dp"
+        android:text="1/10"
+        android:textColor="@color/white"
+        android:id="@+id/nextWorkoutNumber"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addSeconds"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="181dp"
+        android:text="X 10"
+        android:id="@+id/nextReps"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+
+</RelativeLayout>

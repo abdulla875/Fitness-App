@@ -14,7 +14,9 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
-
+/**
+ * This fragment is being used to allow the user check their BMI.
+ */
 public class BmiFragment extends Fragment {
 
     View view;
@@ -33,11 +35,14 @@ public class BmiFragment extends Fragment {
         resultTextView = view.findViewById(R.id.bmiResult);
         checkButton = view.findViewById(R.id.bmiCheckbtn);
 
-
+/**
+ * When the user click on the button it will show their BMI also it will show what categories their bmi are fell into.
+ */
         checkButton.setOnClickListener(new View.OnClickListener() {
             @SuppressLint({"DefaultLocale", "SetTextI18n"})
             @Override
             public void onClick(View v) {
+
                 if(heightEditText.getText().toString().length() == 0){
                     heightEditText.setText("0");
                 }

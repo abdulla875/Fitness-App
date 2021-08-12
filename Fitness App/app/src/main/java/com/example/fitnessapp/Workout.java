@@ -18,5 +18,12 @@ public class Workout extends AppCompatActivity {
                 startActivity(new Intent(Workout.this,EasyWorkoutActivity.class));
             }
         });
+
+        findViewById(R.id.mediumbtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Workout.this,MediumExerciseActivity.class));
+            }
+        });
     }
 }

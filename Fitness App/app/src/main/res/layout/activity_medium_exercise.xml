@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MediumExerciseActivity">
+
+
+    <TextView
+        android:id="@+id/exerciseNameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exerciseId"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="38dp"
+        android:gravity="center"
+        android:text="Diamond Push-up"
+        android:textColor="#000000"
+        android:textSize="44sp" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifs"
+        android:layout_width="338dp"
+        android:layout_height="262dp"
+        android:layout_below="@id/exerciseNameId"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="44dp"
+        android:src="@drawable/starpushup"></pl.droidsonroids.gif.GifImageView>
+
+    <TextView
+        android:id="@+id/reps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gifs"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="183dp"
+        android:text="X 12"
+        android:textColor="#00008b"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="13dp"
+        android:text="Exercise "
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:layout_marginLeft="20dp"/>
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/timer"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentTop="true"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:layout_marginTop="13dp"-->
+    <!--        android:layout_marginEnd="54dp"-->
+    <!--        android:text="00:00"-->
+    <!--        android:textColor="#000000"-->
+    <!--        android:textSize="30dp" />-->
+
+    <TextView
+        android:id="@+id/exerciseId"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="146dp"
+        android:text="1/10"
+        android:textColor="#000000"
+        android:textSize="30dp" />
+
+    <ImageView
+        android:layout_width="92dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/reps"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="60dp"
+        android:onClick="nextExercise"
+        android:src="@drawable/right">
+    </ImageView>
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/reps"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="171dp"
+        android:onClick="nextExercise"
+        android:src="@drawable/check"/>
+
+    <ImageView
+        android:layout_width="92dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/reps"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="303dp"
+        android:backgroundTint="@null"
+        android:onClick="backExercise"
+        android:id="@+id/goleft_btn"
+        android:src="@drawable/left"/>
+
+    <Chronometer
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="30dp"
+        android:textSize="30sp" />
+
+    <FrameLayout
+        android:id="@+id/frame_Container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
