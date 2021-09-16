@@ -12,7 +12,6 @@
         <activity android:name=".MediumExerciseActivity"></activity>
         <activity android:name=".Calories" />
         <activity android:name=".EasyWorkoutActivity" />
-        <activity android:name=".Workout" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

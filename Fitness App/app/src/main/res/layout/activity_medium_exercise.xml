@@ -26,10 +26,9 @@
         android:id="@+id/gifs"
         android:layout_width="338dp"
         android:layout_height="262dp"
-        android:layout_below="@id/exerciseNameId"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="240dp"
         android:src="@drawable/starpushup"></pl.droidsonroids.gif.GifImageView>
 
     <TextView
