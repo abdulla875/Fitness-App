@@ -6,45 +6,63 @@
     android:layout_height="match_parent"
     tools:context=".Calories">
 
-    <ImageView
-        android:id="@+id/caloriestitle"
-        android:layout_width="wrap_content"
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:src="@drawable/caloriestitle" />
+        android:id="@+id/tabLayout">
 
-    <Button
-        android:id="@+id/bmibtn"
-        android:layout_width="322dp"
-        android:layout_height="121dp"
-        android:layout_below="@+id/caloriestitle"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="155dp"
-        android:layout_marginEnd="46dp"
-        android:text="BMI"
-        android:textSize="40dp" />
+    </com.google.android.material.tabs.TabLayout>
 
-    <Button
-        android:id="@+id/caloriesIntakebtn"
-        android:layout_width="323dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bmibtn"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="38dp"
-        android:text="Calories intake"
-        android:textSize="40dp" />
-
-    <FrameLayout
-        android:id="@+id/bmifragment"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="0dp" />
+        android:layout_below="@+id/tabLayout">
+    </androidx.viewpager2.widget.ViewPager2>
 
-    <FrameLayout
-        android:id="@+id/caloriesIntakeFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="0dp" />
+
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/caloriestitle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10sp"-->
+<!--        android:src="@drawable/caloriestitle" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/bmibtn"-->
+<!--        android:layout_width="322dp"-->
+<!--        android:layout_height="121dp"-->
+<!--        android:layout_below="@+id/caloriestitle"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="155dp"-->
+<!--        android:layout_marginEnd="46dp"-->
+<!--        android:text="BMI"-->
+<!--        android:textSize="40dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/caloriesIntakebtn"-->
+<!--        android:layout_width="323dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/bmibtn"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="28dp"-->
+<!--        android:layout_marginEnd="38dp"-->
+<!--        android:text="Calories intake"-->
+<!--        android:textSize="40dp" />-->
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/bmifragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginTop="0dp" />-->
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/caloriesIntakeFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginTop="0dp" />-->
 
 </RelativeLayout>

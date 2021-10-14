@@ -54,21 +54,21 @@ public class EasyExerciseData implements Exercises {
 
 
 
-//        repMap.put(workoutList.get(0), repsList.get(0));
-//        repMap.put(workoutList.get(1), repsList.get(1));
-//        repMap.put(workoutList.get(2), repsList.get(2));
-//        repMap.put(workoutList.get(0), repsList.get(3));
-//        repMap.put(workoutList.get(1), repsList.get(4));
-//        repMap.put(workoutList.get(2), repsList.get(5));
-//        repMap.put(workoutList.get(0), repsList.get(6));
-//        repMap.put(workoutList.get(1), repsList.get(7));
-//        repMap.put(workoutList.get(2), repsList.get(8));
-//        repMap.put(workoutList.get(0), repsList.get(9));
-//        repMap.put(workoutList.get(1), repsList.get(10));
-//        repMap.put(workoutList.get(2), repsList.get(11));
-//        repMap.put(workoutList.get(0), repsList.get(12));
-//        repMap.put(workoutList.get(1), repsList.get(13));
-//        repMap.put(workoutList.get(2), repsList.get(14));
+        repMap.put(workoutList.get(0), repsList.get(0));
+        repMap.put(workoutList.get(1), repsList.get(1));
+        repMap.put(workoutList.get(2), repsList.get(2));
+        repMap.put(workoutList.get(0), repsList.get(3));
+        repMap.put(workoutList.get(1), repsList.get(4));
+        repMap.put(workoutList.get(2), repsList.get(5));
+        repMap.put(workoutList.get(0), repsList.get(6));
+        repMap.put(workoutList.get(1), repsList.get(7));
+        repMap.put(workoutList.get(2), repsList.get(8));
+        repMap.put(workoutList.get(0), repsList.get(9));
+        repMap.put(workoutList.get(1), repsList.get(10));
+        repMap.put(workoutList.get(2), repsList.get(11));
+        repMap.put(workoutList.get(0), repsList.get(12));
+        repMap.put(workoutList.get(1), repsList.get(13));
+        repMap.put(workoutList.get(2), repsList.get(14));
 
 
 

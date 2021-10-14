@@ -5,29 +5,28 @@
     android:layout_height="match_parent"
     tools:context=".BmiFragment">
 
-
-<ImageView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/bmititle"
-    android:src="@drawable/bmi"/>
+    <ImageView
+        android:id="@+id/bmititle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bmi" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/bmititle"
-        android:layout_marginTop="151dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="72dp"
         android:text="Weight (KG)"
         android:textSize="30dp" />
 
     <EditText
+        android:id="@+id/weightEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/bmititle"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="150dp"
-        android:id="@+id/weightEditText"
+        android:layout_marginTop="74dp"
         android:hint="Weight (KG)" />
 
     <TextView
@@ -35,17 +34,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/bmititle"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="246dp"
+        android:layout_marginTop="165dp"
         android:text="Height (M)"
         android:textSize="30dp" />
 
     <EditText
+        android:id="@+id/heightEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/bmititle"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="246dp"
-        android:id="@+id/heightEditText"
+        android:layout_marginTop="154dp"
         android:hint="Height (M)" />
 
     <Button

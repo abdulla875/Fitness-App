@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeNav"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/home">
+
+    </item>
+
+    <item
+        android:id="@+id/bmiNav"
+        android:icon="@drawable/ic_baseline_calculate_24"
+        android:title="@string/calories">
+
+    </item>
+
+    <item
+        android:id="@+id/caloriesIntakeNav"
+        android:icon="@drawable/ic_baseline_restaurant_24"
+        android:title="@string/calories_intake">
+
+    </item>
+
+    <item
+        android:id="@+id/statusNav"
+        android:icon="@drawable/ic_baseline_insert_chart_24"
+        android:title="@string/status">
+
+    </item>
+
+
+
+</menu>

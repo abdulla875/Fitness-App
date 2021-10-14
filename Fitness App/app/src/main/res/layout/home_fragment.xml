@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <ScrollView
+        android:id="@+id/sview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_above="@+id/navigationMenu">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/title" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/beginnerWorkoutProgram"
+                        android:layout_width="240dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/beginners">
+
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/intermediatesWorkoutProgram"
+                        android:layout_width="240dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/intermediates" />
+
+                    <ImageView
+                        android:id="@+id/advanceWorkout"
+                        android:layout_width="240dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/advanceds" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Beginner"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="50dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/absbeginner" />
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/chestandarmbeginner" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/legbeginner" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Intermediate"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="50dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/absintermediate" />
+
+                <ImageView
+                    android:layout_width="250dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/chestandarmintermediate" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/legintermediate" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

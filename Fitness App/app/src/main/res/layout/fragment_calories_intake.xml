@@ -17,12 +17,12 @@
         android:layout_marginTop="130dp"
         android:layout_marginLeft="20dp"
         android:text="Weight (KG)"
-        android:textSize="30dp" />
+        android:textSize="20dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="200dp"
+        android:layout_marginLeft="180dp"
         android:layout_marginTop="130dp"
         android:id="@+id/weightEditText"
         android:hint="Weight (KG)" />
@@ -31,15 +31,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="226dp"
+        android:layout_marginTop="210dp"
         android:text="Height (M)"
-        android:textSize="30dp" />
+        android:textSize="20dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="226dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="210dp"
         android:id="@+id/heightEditText"
         android:hint="Height (M)" />
 
@@ -47,15 +47,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="322dp"
+        android:layout_marginTop="290dp"
         android:text="Age"
-        android:textSize="30dp" />
+        android:textSize="20dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="322dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="290dp"
         android:id="@+id/ageEditText"
         android:hint="Age" />
 
@@ -63,30 +63,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="418dp"
+        android:layout_marginTop="370dp"
         android:text="Gender"
-        android:textSize="30dp" />
+        android:textSize="20dp" />
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="418dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="370dp"
         android:id="@+id/genderSpinner"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="514dp"
+        android:layout_marginTop="450dp"
         android:text="Activity"
-        android:textSize="30dp" />
+        android:textSize="20dp" />
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="514dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="450dp"
         android:id="@+id/activityLevelSpinner"
         />
 
@@ -98,8 +98,9 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="33dp"
         android:text="Check"
-        android:onClick="checkCaloriesIntake"
         android:textSize="30dp" />
+
+<!--    android:onClick="checkCaloriesIntake"-->
 
     <TextView
         android:id="@+id/caloriesIntakeResult"

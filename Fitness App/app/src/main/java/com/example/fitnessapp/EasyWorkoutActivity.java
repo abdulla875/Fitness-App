@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Chronometer;
@@ -73,7 +74,7 @@ public class EasyWorkoutActivity extends AppCompatActivity implements EasyExerci
 
     }
 
-
+    
     public void backExercise(View view) {
         easyExerciseData.index --;
         easyExerciseData.exerciseNon --;
